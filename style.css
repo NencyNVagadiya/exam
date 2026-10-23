@@ -1,0 +1,194 @@
+
+:root {
+color-scheme: light;
+font-family: Arial, Helvetica, sans-serif;
+color: #1f2937;
+background: #f3f6fb;
+}
+
+* {
+     box-sizing: border-box;
+}
+ body {
+         min-height: 100vh;
+         margin: 0;
+         display: flex;
+         flex-direction: column;
+        }
+
+header {
+         padding: 1rem 1.5rem;
+        color: #fff;
+        background: #174ea6;
+        }
+
+.header-content,
+main,
+footer {
+        width: min(100% - 2rem, 960px);
+        margin-inline: auto;
+        }
+
+.header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            margin: 0;
+            font-size: 1.35rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding-block: 3rem;
+        }
+
+        .intro {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .intro h1 {
+            margin-bottom: 0.5rem;
+            color: #174ea6;
+        }
+
+        .intro p {
+            margin-top: 0;
+            color: #526174;
+        }
+
+        .feedback-card {
+            max-width: 680px;
+            margin-inline: auto;
+            padding: clamp(1.25rem, 4vw, 2rem);
+            border: 1px solid #e1e7ef;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 24px rgb(31 41 55 / 8%);
+        }
+
+        .field {
+            margin-bottom: 1.25rem;
+        }
+
+        label,
+        legend {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #bac5d3;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #174ea6;
+            outline: 3px solid rgb(23 78 166 / 15%);
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        fieldset {
+            margin: 0 0 1.25rem;
+            padding: 0;
+            border: 0;
+        }
+
+        .rating-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.25rem;
+        }
+
+        .rating-options label,
+        .checkbox-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .rating-options input,
+        .checkbox-label input {
+            width: auto;
+            margin: 0;
+            accent-color: #174ea6;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 0;
+            border-radius: 6px;
+            color: #fff;
+            background: #174ea6;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #123d82;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #7aa7ed;
+            outline-offset: 3px;
+        }
+
+        footer {
+            padding-block: 1.25rem;
+            color: #526174;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 520px) {
+            .header-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            main {
+                padding-block: 2rem;
+            }
+        }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share feedback with the StudentHub team.">
+    <title>StudentHub - Student Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <p class="brand">StudentHub</p>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Student Feedback</h1>
+            <p>Your feedback helps us make StudentHub better for everyone.</p>
+        </div>
+
+        <section class="feedback-card" aria-labelledby="feedback-form-heading">
+            <h2 id="feedback-form-heading">Share your experience</h2>
+            <form method="post" id="feedback-form" novalidate>
+                <div class="field">
+                    <label for="student-name">Your name</label>
+                    <input
+                        type="text"
+                        id="student-name"
+                        name="student_name"
+                        autocomplete="name"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="student-email">Student email</label>
+                    <input
+                        type="email"
+                        id="student-email"
+                        name="student_email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="feedback-topic">What is your feedback about?</label>
+                    <select id="feedback-topic" name="feedback_topic" required>
+                        <option value="" selected disabled>Select a topic</option>
+                        <option value="website">Website experience</option>
+                        <option value="courses">Courses and study materials</option>
+                        <option value="events">Events and notices</option>
+                        <option value="support">Student support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="teaching-score">Teaching score (0–10)</label>
+                    <input
+                        type="number"
+                        id="teaching-score"
+                        name="teaching_score"
+                        min="0"
+                        max="10"
+                        step="any"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="practical-score">Practical score (0–10)</label>
+                    <input
+                        type="number"
+                        id="practical-score"
+                        name="practical_score"
+                        min="0"
+                        max="10"
+                        step="any"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="content-score">Content score (0–10)</label>
+                    <input
+                        type="number"
+                        id="content-score"
+                        name="content_score"
+                        min="0"
+                        max="10"
+                        step="any"
+                        required
+                    >
+                </div>
+
+                <p id="feedback-result" role="status" aria-live="polite"></p>
+
+                <fieldset>
+                    <legend>How would you rate your experience?</legend>
+                    <div class="rating-options">
+                        <label><input type="radio" name="rating" value="excellent" required> Excellent</label>
+                        <label><input type="radio" name="rating" value="good"> Good</label>
+                        <label><input type="radio" name="rating" value="okay"> Okay</label>
+                        <label><input type="radio" name="rating" value="poor"> Poor</label>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="feedback-message">Your feedback</label>
+                    <textarea
+                        id="feedback-message"
+                        name="feedback_message"
+                        placeholder="Tell us what went well or what we could improve..."
+                        minlength="10"
+                        maxlength="2000"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="field">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="follow_up" value="yes">
+                        I am happy to be contacted about my feedback.
+                    </label>
+                </div>
+
+                <button type="submit">Submit feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
