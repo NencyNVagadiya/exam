@@ -2,6 +2,10 @@ function calculateAvarage(techning, practical, content) {
     return (techning + practical + content) / 3;
 }
 
+function calculatePercentage(average) {
+    return (average / 10) * 100;
+}
+
 function getclasification(avarage) {
     if (avarage >= 8) {
         return "Excellent";
@@ -33,8 +37,9 @@ function validatefeedback() {
     }
 
     const avarage = calculateAvarage(scores[0], scores[1], scores[2]);
+    const percentage = calculatePercentage(avarage);
     result.textContent =
-        `Average score: ${avarage.toFixed(2)} / 10. Classification: ${getclasification(avarage)}.`;
+        `Feedback submitted successfully! Average score: ${avarage.toFixed(2)} / 10 (${percentage.toFixed(2)}%). Classification: ${getclasification(avarage)}.`;
     return true;
 }
 
